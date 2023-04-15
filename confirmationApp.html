@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+
+        img {
+            object-fit: contain;
+            height: 10rem;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <nav class="px-3 sm:px-5 py-3.5 w-full top-0 left-0 bg-slate-200">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="index.html" class="flex items-center">
+        <img src="Vaidhya.png" class="h-6 mr-3 sm:h-9" alt="Vaidhya Logo" />
+      </a>
+      <div class="flex md:order-2">
+        <a href="findDoctors.html">
+          <button type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+            Find Doctors
+          </button>
+        </a>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul
+          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+          <li>
+            <a href="index.html"
+              class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Profile</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Services</a>
+          </li>
+          <li id="navLogout">
+            <button onclick="logout()"
+              class=" block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Logout</button>
+          </li>
+          <li id="navLogin">
+            <a href="/login.html"
+              class=" block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div>
+        <div class=" heading">
+            <img class="relative" src="checkmark.jpeg" alt="">
+        </div>
+        <div class="flex justify-center content-center flex-col flex-wrap" style="margin-top: 10em">
+            <h1 class="text-center font-bold text-3xl">Thank You!</h1>
+            <br>
+            <p>Your appointment has been booked.</p>
+        </div>
+        
+</div>
+<script src="nav.js"></script>
+
+</body>
+
+</html>

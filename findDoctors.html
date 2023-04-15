@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appointment</title>
+  <link rel="stylesheet" href="dist/output.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+
+    .table-auto tbody tr:hover {
+      background-color: #f5f5f5;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <nav class="px-3 sm:px-5 py-3.5 w-full top-0 left-0 bg-slate-200">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="index.html" class="flex items-center">
+        <img src="Vaidhya.png" class="h-6 mr-3 sm:h-9" alt="Vaidhya Logo" />
+      </a>
+      <div class="flex md:order-2">
+        <a href="findDoctors.html">
+          <button type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+            Find Doctors
+          </button>
+        </a>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul
+          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+          <li>
+            <a href="index.html"
+              class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Profile</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Services</a>
+          </li>
+          <li id="navLogout">
+            <button onclick="logout()"
+              class=" block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Logout</button>
+          </li>
+          <li id="navLogin">
+            <a href="/login.html"
+              class=" block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="relative z-0">
+    <div class="heading">
+      <h1 class="text-4xl">Find Doctors</h1>
+    </div>
+    <div class="container mx-auto" style="margin-top: 10em">
+      <div style="margin-top: 10px">
+        <form id="appointment-form" action="">
+          <div class="flex justify-between w-full">
+            <div class="flex w-6/12 ">
+              <label for="appointment-type" class="mt-5 block mb-2 text-sm font-medium text-gray-900">Doctors</label>
+              <select id="appointmenttype"
+                class=" ml-5 w-full bg-white border border-blue-300 text-black text-sm rounded-lg focus:ring-blue-900 focus:border-blue-500 p-2.5">
+                <option value="Select an appointment type">
+                  Select specialization
+                </option>
+              </select>
+            </div>
+            <div class="ml-24 flex w-6/12 ">
+              <label for="city" class="mt-5 block mb-2 text-sm font-medium text-gray-900">City</label>
+              <select id="city"
+                class="ml-5 w-full bg-white border border-blue-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+                <option value="Select a city">Select a city</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-5 flex">
+            <div class="flex items-center mr-4">
+
+              <input id="inline-radio" type="radio" name="inline-radio-group"
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500" onclick="token()" />
+              <label for="inline-radio" class="ml-2 text-sm font-semibold text-gray-700">Book Token</label>
+            </div>
+            <div class="flex items-center mr-4">
+              <input id="inline-2-radio" type="radio" value="appointment" name="inline-radio-group"
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500" onclick="appointment()" />
+              <label for="inline-2-radio" class="ml-2 text-sm font-semibold text-gray-700">Book appointment</label>
+            </div>
+          </div>
+
+          <button type="submit" class="mt-5 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
+            Find Doctors
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto" style="margin-top: 5rem">
+    <div class="appointment-results hidden relative overflow-x-auto" id="appointment-results">
+      <table class="table-auto w-full text-sm text-left text-gray-500">
+        <thead class="text-xs text-gray-700 uppercase">
+          <tr>
+            <th scope="col" class="px-6 py-3">Doctor name</th>
+            <th scope="col" class="px-6 py-3">City</th>
+            <th scope="col" class="px-6 py-3">Address</th>
+            <th scope="col" class="px-6 py-3">Appointment Type</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="result-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="nav.js"></script>
+  <script src="findDoctors.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.doctor {
+    display: block;
+    margin-top: 0;
+    padding-top: 0;
+    width: 1000px;
+    height: auto;
+  }
+
+  .vaidhyaLogo{
+    margin: 0;
+    object-fit: contain;
+    height: 3rem;
+  }

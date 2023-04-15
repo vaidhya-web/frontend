@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaidhya</title>
+  <!-- Tailwind CSS -->
+<link rel="stylesheet" href="dist/output.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-gray-100">
+  <!-- Navigation bar -->
+  <nav class="px-3 sm:px-5 py-3.5 w-full top-0 left-0 bg-slate-200">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="index.html" class="flex items-center">
+        <img src="Vaidhya.png" class="h-6 mr-3 sm:h-9" alt="Vaidhya Logo" />
+      </a>
+      <div class="flex md:order-2">
+        <a href="findDoctors.html">
+          <button type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+            Find Doctors
+          </button>
+        </a>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul
+          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+          <li>
+            <a href="index.html"
+              class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Profile</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Services</a>
+          </li>
+          <li id="navLogout">
+            <button onclick="logout()"
+              class=" block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Logout</button>
+          </li>
+          <li id="navLogin">
+            <a href="/login.html"
+              class=" block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section -->
+  <div class="bg-gradient-to-r from-purple-500 to-indigo-500">
+    <div class="pl-10 pt-24 flex align-content-center justify-center">
+      <div class="flex-row align-content-center justify-center">
+        
+          <h1 class="relative top-80 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Expert care for your family's health
+          </h1>
+          <p class="relative top-80 mt-6 max-w-lg text-xl text-white">Find the best doctors near you. Book
+            tokens, appointments, see previous appointments and more. </p>
+        
+      </div>
+      <img class="doctor" src="logo/Final.png">
+
+    </div>
+    <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div class="mt-10 ml-auto sm:flex">
+        <!-- <div class="rounded-md">
+          <a href="#"
+            class="flex w-full items-center justify-center rounded-t-md border border-transparent bg-white px-8 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50 md:py-4 md:px-10 md:text-lg">
+            Find Doctors </a>
+        </div> -->
+        <!-- <div class="mt-3 sm:mt-0 sm:ml-3">
+            <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"> Learn more </a>
+          </div> -->
+      </div>
+      <!-- Services section -->
+      <div class="bg-white rounded-t-lg shadow">
+        <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900">Our Services</h2>
+            <p class="mt-4 text-lg text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
+              justo odio, vel fringilla tellus interdum ac.</p>
+          </div>
+          <div class="mt-16 grid gap-10 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
+                <!-- Heroicon name: outline/globe-alt -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0 3c5.523 0 10-4.477 10-10S17.523 5 12 5 2 9.477 2 15s4.477 10 10 10z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m-6 0l3-3" />
+                </svg>
+              </div>
+              <h3 class="mt-8 text-lg font-medium text-gray-900">General Checkup</h3>
+              <p class="mt-5 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                feugiat justo odio, vel fringilla tellus interdum ac.</p>
+            </div>
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
+                <!-- Heroicon name: outline/scale -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 12.79V10a9 9 0 1 0-6.14 8.54" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 6.5v5c0 2.43 1.5 4.47 3.6 5.32m3.9.68A6.96 6.96 0 0 0 12 18c1.43 0 2.78-.43 3.9-1.18M11 6v5" />
+                </svg>
+              </div>
+              <h3 class="mt-8 text-lg font-medium text-gray-900">Family Planning</h3>
+              <p class="mt-5 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                feugiat justo odio, vel fringilla tellus interdum ac.</p>
+            </div>
+
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
+                <!-- Heroicon name: outline/shield-check -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="mt-8 text-lg font-medium text-gray-900">Family Planning</h3>
+              <p class="mt-5 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                feugiat justo odio, vel fringilla tellus interdum ac.</p>
+            </div>
+
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
+                <!-- Heroicon name: outline/shield-check -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="mt-8 text-lg font-medium text-gray-900">Vaccination</h3>
+              <p class="mt-5 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                feugiat justo odio, vel fringilla tellus interdum ac.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonials section -->
+      </div>
+      <div class="bg-gray-50 rounded-b-lg shadow">
+        <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900">Testimonials</h2>
+            <p class="mt-4 text-lg text-gray-500">See what our patients have to say about us.</p>
+          </div>
+          <div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+              <div class="flex-shrink-0">
+                <img class="h-48 w-full object-cover" src="https://source.unsplash.com/SHqtg2vYsOo/400x400" alt="" />
+              </div>
+              <div class="flex flex-1 flex-col justify-between bg-white p-6">
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-indigo-600">Patient</p>
+                  <a href="#" class="mt-2 block">
+                    <p class="text-xl font-semibold text-gray-900">"I felt well taken care of"</p>
+                    <p class="mt-3 text-base text-gray-500">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed feugiat justo odio, vel fringilla tellus interdum ac."</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+              <div class="flex-shrink-0">
+                <img class="h-48 w-full object-cover" src="https://source.unsplash.com/V7E-w9nWLHw/400x400" alt="" />
+              </div>
+              <div class="flex flex-1 flex-col justify-between bg-white p-6">
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-indigo-600">Patient</p>
+                  <a href="#" class="mt-2 block">
+                    <p class="text-xl font-semibold text-gray-900">"Friendly and knowledgeable staff"</p>
+                    <p class="mt-3 text-base text-gray-500">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed feugiat justo odio, vel fringilla tellus interdum ac."</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+              <div class="flex-shrink-0">
+                <img class="h-48 w-full object-cover" src="https://source.unsplash.com/kswuV7pZbHE/400x400" alt="" />
+              </div>
+              <div class="flex flex-1 flex-col justify-between bg-white p-6">
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-indigo-600">Patient</p>
+                  <a href="#" class="mt-2 block">
+                    <p class="text-xl font-semibold text-gray-900">"Professional and caring"</p>
+                    <p class="mt-3 text-base text-gray-500">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed feugiat justo odio, vel fringilla tellus interdum ac."</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CTA section -->
+      <!-- <div class="bg-indigo-700">
+            <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+              <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+                <div>
+                  <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Ready to make an appointment?</h2>
+                  <p class="mt-3 max-w-3xl text-lg text-gray-300">Contact us today to schedule an appointment and start feeling better.</p>
+                </div>
+                <div class="mt-8 lg:mt-0">
+                  <div class="inline-flex rounded-md shadow">
+                    <a href="#" class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50"> Contact us </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+      <!-- Footer -->
+    </div>
+  </div>
+  <footer class="bg-gray-800">
+    <div class="mx-auto max-w-7xl overflow-hidden py-8 px-4 sm:px-6 lg:px-8">
+      <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+        <div class="px-5 py-2">
+          <a href="#" class="text-base text-gray-400 hover:text-gray-300"> About </a>
+        </div>
+        <div class="px-5 py-2">
+          <a href="#" class="text-base text-gray-400 hover:text-gray-300"> Services </a>
+        </div>
+        <div class="px-5 py-2">
+          <a href="#" class="text-base text-gray-400 hover:text-gray-300"> Blog </a>
+        </div>
+
+        <div class="px-5 py-2">
+          <a href="#" class="text-base text-gray-400 hover:text-gray-300"> Careers </a>
+        </div>
+
+        <div class="px-5 py-2">
+          <a href="#" class="text-base text-gray-400 hover:text-gray-300"> Contact </a>
+        </div>
+      </nav>
+      <div class="mt-8 flex justify-center space-x-6">
+        <a href="#" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">Facebook</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.59 2H3.41C2.65 2 2 2.65 2 3.41V20.59C2 21.35 2.65 22 3.41 22H12.9V14.24H9.83V11.01H12.9V8.81C12.9 5.76 14.83 4.3 17.15 4.3C18.16 4.3 19.16 4.38 19.42 4.41V7.15L17.69 7.16C16.46 7.16 16.2 7.81 16.2 8.67V11H19.3L18.9 14.24H16.2V22H20.59C21.35 22 22 21.35 22 20.59V3.41C22 2.65 21.35 2 20.59 2Z" />
+          </svg>
+        </a>
+
+        <a href="#" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">Twitter</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M23.98 4.57C23.05 4.97 22.05 5.22 21 5.31C22.07 4.73 22.97 3.78 23.46 2.63C22.5 3.18 21.44 3.57 20.33 3.79C19.38 2.82 18.05 2.3 16.61 2.3C13.53 2.3 11.06 4.77 11.06 7.86C11.06 8.23 11.11 8.58 11.2 8.92C7.3 8.7 3.86 6.51 1.57 3.54C1.16 4.32 0.93 5.2 0.93 6.12C0.93 8.1 2.14 9.81 3.79 10.59C3.12 10.59 2.46 10.47" />
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">LinkedIn</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.86 3.94C19.86 3.41 18.67 3.11 17.45 3.11C15.69 3.11 14.35 4.02 13.72 5.14C13.47 5.52 13.37 6.02 13.37 6.54V6.54C13.37 7.86 14.34 8.86 15.65 8.86H15.68C16.89 8.86 17.86 7.86 17.86 6.54V6.54C17.86 6.03 17.76 5.53 17.49 5.15C16.86 4.02 15.52 3.11 13.76 3.11C12.54 3.11 11.36 3.41 10.36 3.94C8.94 4.61 7.82 5.74 7.14 7.15C6.45 8.57 6.17 10.17 6.17 11.83V11.83C6.17 13.5 6.45 15.1 7.14 16.52C7.82 17.93 8.94 19.06 10.36 19.73C11.36 20.25 12.54 20.55 13.76 20.55C15.52 20.55 16.86 19.64 17.49 18.52C17.76 18.14 17.86 17.63 17.86 17.12V17.12C17.86 15.79 16.89 14.79 15.68 14.79H15.65C14.34 14.79 13.37 15.79 13.37 17.12V17.12C13.37 17.64 13.27 18.14 13.02 18.52C12.39 19.64 11.05 20.55 9.29 20.55C7.07 20.55 5.22 19.06 4.5 17.07C4.21 16.35 4.09 15.58 4.09 14.79V14.79C4.09 14.02 4.21 13.26 4.45 12.55C5.17 10.13 7.2 8.11 9.64 7.43C10.1 7.29 10.57 7.21 11.06 7.21H11.09C11.57 7.21 12.05 7.29 12.5 7.43C14.94 8.11 16.96 10.13 17.68 12.55C17.92 13.26 18.04 14.02 18.04 14.79V14.79C18" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <script src="nav.js"></script>
+
+</body>
+
+</html>

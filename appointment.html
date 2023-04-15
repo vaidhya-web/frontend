@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            plugins: [require("@tailwindcss/forms")],
+        };
+    </script> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+    </style>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="px-3 sm:px-5 py-3.5 w-full top-0 left-0 bg-slate-200">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="index.html" class="flex items-center">
+            <img src="Vaidhya.png" class="h-6 mr-3 sm:h-9" alt="Vaidhya Logo" />
+          </a>
+          <div class="flex md:order-2">
+            <a href="findDoctors.html">
+              <button type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+                Find Doctors
+              </button>
+            </a>
+          </div>
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul
+              class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+              <li>
+                <a href="index.html"
+                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
+                  aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Profile</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Services</a>
+              </li>
+              <li id="navLogout">
+                <button onclick="logout()"
+                  class=" block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Logout</button>
+              </li>
+              <li id="navLogin">
+                <a href="/login.html"
+                  class=" block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="hidden" id="login">
+        <div class="m-5 mt-0 p-5 rounded-lg flex bg-red-500 relative z-2 justify-center align-content-center">
+            <h2 class="text-slate-200">Please login.</h2>
+        </div>
+    </div>
+    <div class="relative z-0">
+        <div class="heading">
+            <h1 class="text-4xl">Book appointment</h1>
+        </div>
+        <div class="container mx-auto" style="margin-top: 10em">
+            <div style="margin-top: 10px">
+
+                <form>
+                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                        <div>
+                            <label for="doc-name" class="block mb-2 text-sm font-medium text-gray-900 ">Doctor
+                                name</label>
+                            <input type="text" id="doc-name"
+                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 "
+                                readonly>
+                        </div>
+                        <div>
+                            <label for="city" class="block mb-2 text-sm font-medium text-gray-900 ">City</label>
+                            <input type="text" id="city"
+                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 "
+                                readonly>
+                        </div>
+                    </div>
+                    <div class="grid gap-1 mb-6 grid-cols-3">
+                        <div>
+                            <label for="address" class="block mb-2 text-sm font-medium text-gray-900 ">Address</label>
+                            <input type="text" id="address"
+                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 "
+                                readonly>
+                        </div>
+                        <div>
+                            <label for="app-type"
+                                class="block mb-2 text-sm font-medium text-gray-900 ">Specialization</label>
+                            <input type="text" id="app-type"
+                                class="bg-white  border border-gray-300  text-gray-900 text-sm rounded-lg block w-full p-2.5 " " readonly>
+                        </div>
+                        <div>
+                            <label for=" price" class="block mb-2 text-sm font-medium text-gray-900 ">Price</label>
+                            <input type="url" id="price"
+                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 "
+                                readonly>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-medium mb-2" for="date">Date</label>
+                        <input class="border border-blue-300 rounded-lg form-input py-2 px-3 text-gray-700" id="date"
+                            type="date">
+                    </div>
+            </div>
+
+            <button id="slotBtn"
+                class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
+                Slots</button>
+            </form>
+            <div class="bg-cyan-50 rounded-lg px-3 py-3 hidden" id="button-container">
+                <h2">Available slots:</h2>
+            </div>
+        </div>
+    </div>
+    <script src="nav.js"></script>
+    <script src="bookappointment.js"></script>
+
+</body>
+
+</html>
